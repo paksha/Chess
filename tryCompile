@@ -1,0 +1,2 @@
+rsync -r -v -e "ssh -y" --exclude 'Chess/.git/*' ../Chess $1:~/
+ssh -X $1 'g++ -g -std=c++14 -o chess ~/Chess/src/*.cc -lX11'
